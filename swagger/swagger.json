@@ -1,0 +1,65 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "express-base-api",
+        "version": "1.0.0",
+        "contact": {
+            "name": "API Support",
+            "email": "mramundo@outlook.it"
+        }
+    },
+    "host": "localhost:80",
+    "basePath": "/api",
+    "tags": [
+        {
+            "name": "system",
+            "description": "System"
+        }
+    ],
+    "paths": {
+        "/system/ping": {
+            "get": {
+                "tags": ["system"],
+                "summary": "Check system",
+                "description": "Check if APIs are up and running",
+                "consumes": ["application/json"],
+                "produces": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    },
+                    "500": {
+                        "description": "Internal server error",
+                        "schema": {
+                            "$ref": "#/definitions/ApiResponse"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "ApiResponse": {
+            "type": "object",
+            "properties": {
+                "status": {
+                    "description": "HTTP status",
+                    "type": "integer",
+                    "format": "int32"
+                },
+                "message": {
+                    "description": "Operation message",
+                    "type": "string"
+                },
+                "data": {
+                    "description": "Data returned from API",
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
