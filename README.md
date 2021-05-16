@@ -4,7 +4,7 @@
 ![Swagger Validator](https://img.shields.io/swagger/valid/3.0?specUrl=https%3A%2F%2Fraw.githubusercontent.com%2Fmramundo%2Fexpress-base-api%2Fmaster%2Fswagger%2Fswagger.json)
 [![github: mramundo](https://img.shields.io/github/followers/mramundo?label=Follow&style=social)](https://github.com/mramundo)
 
-express-base-api is an Express API boilerplate that uses Compression, Cors and Swagger modules.
+express-base-api is an Express API boilerplate that uses Compression, CORS and Swagger modules.
 
 ## Scripts
 
